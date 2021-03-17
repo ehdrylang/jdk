@@ -25,7 +25,7 @@ public class BookServiceImpl {
         Book savedBook = bookRepository.save(book);
         log.error("savedBook = " + savedBook);
         Book nullBook = Book.builder()
-                .price(null)
+                .price(BigDecimal.ZERO)
                 .title("Spring Boot 2")
                 .author("jdk")
                 .build();
