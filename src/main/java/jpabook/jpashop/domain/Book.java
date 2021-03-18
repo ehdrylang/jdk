@@ -1,10 +1,11 @@
 package jpabook.jpashop.domain;
 
 import lombok.*;
-import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 
 @Entity
@@ -15,7 +16,6 @@ public class Book {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
-    @Length(min = 5)
     private String author;
     private BigDecimal price;
 
