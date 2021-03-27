@@ -15,7 +15,7 @@ public class Address {
     private String city;
     private String street;
     private String zipcode;
-    @Component
+  
     @Builder
     public Address(String city, String street, String zipcode){
         this.city = city;
