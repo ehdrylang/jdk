@@ -1,9 +1,6 @@
 package jpabook.jpashop.domain.item;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -19,4 +16,10 @@ public class Book extends Item {
     private String title;
     private String author;
 
+    @Builder
+    public Book(String isbn, String title, String author){
+        this.isbn = isbn;
+        this.title = title;
+        this.author = author;
+    }
 }
